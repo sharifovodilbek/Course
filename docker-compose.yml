@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    container_name: nestjs_app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: 'postgresql://neondb_owner:npg_fql0MmB7eDRY@ep-noisy-rain-aeo0w4jz-pooler.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
+    command: ["npm", "run", "start:migrate:prod"]
+
+volumes:
+    pgdata:
