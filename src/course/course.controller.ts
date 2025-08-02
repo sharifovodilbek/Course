@@ -5,7 +5,7 @@ import { UpdateCourseDto } from './dto/update-course.dto';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { RoleGuard } from 'src/guards/role.guard';
 import { RoleD } from 'src/auth/decorator';
-import { Role } from '@prisma/index';
+import { Role } from '@prisma/client';
 
 @Controller('course')
 export class CourseController {
